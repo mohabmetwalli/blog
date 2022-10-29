@@ -4,7 +4,7 @@ export default function Meta ({ title, keywords, description }) {
   return (
     <Head>
       <title>{title}</title>
-      <meta charset='UTF-8' />
+      <meta charSet='UTF-8' />
       <meta
         name='description'
         content={description}
