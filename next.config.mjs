@@ -1,12 +1,3 @@
-/** @type {import('next').NextConfig}
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true
-}
-
-module.exports = nextConfig
-*/
-
 import remarkFrontmatter from 'remark-frontmatter'
 import rehypeHighlight from 'rehype-highlight'
 
@@ -21,19 +12,14 @@ export default {
           options: {
             providerImportSource: '@mdx-js/react',
             remarkPlugins: [remarkFrontmatter],
-            rehypePlugins: [rehypeHighlight]
-          }
-        }
-      ]
+            rehypePlugins: [rehypeHighlight],
+          },
+        },
+      ],
     })
 
     return config
   },
-
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
-  images: {
-    loader: 'imgix',
-    path: 'https://images.unsplash.com/'
-  }
 }

@@ -1,21 +1,14 @@
-import Link from 'next/link'
 import styles from '../styles/Header.module.css'
 
-const Header = () => {
+export default function Header () {
   return (
     <header className={styles.header}>
-      <div className='max-width-container'>
-        <h2>
-          <Link href='/'>Blog</Link>
-        </h2>
-        <ul>
-          <li>
-            <Link href='/about'>About</Link>
-          </li>
-        </ul>
-      </div>
+      <h2 className={styles.homeLink}>
+        <a href='/'>Home</a>
+      </h2>
+      <h2>
+        <a href='/about'>About</a>
+      </h2>
     </header>
   )
 }
-
-export default Header

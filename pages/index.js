@@ -1,46 +1,11 @@
-import MeetMe from '../components/MeetMe.js'
-import Link from 'next/link'
-import PostItem from '../components/PostItem'
 import styles from '../styles/Home.module.css'
-import Meta from '../components/Meta'
-import { useState } from 'react'
 import { getPosts } from '../scripts/utils.js'
+import Meta from '../components/Meta'
+// import Image from 'next/image'
+import PostItem from '../components/PostItem.js'
 
-const Home = ({ posts }) => {
-  const [filteredPosts, setFilteredPosts] = useState(posts)
-  const [currentPageIndex, setCurrentPageIndex] = useState(1)
-
-  const loadMorePosts = async () => {
-    const res = await fetch(`/api/posts?page=${currentPageIndex + 1}`)
-    const posts = await res.json()
-
-    setFilteredPosts((_posts) => [..._posts, ...posts])
-    setCurrentPageIndex((_pageIndex) => _pageIndex + 1)
-  }
-
-  return (
-    <>
-      <Meta title='PressBlog - Your one stop blog for anything React Native' />
-      <MeetMe />
-      <Link href='/about'>More about me</Link>
-
-      <div className={styles.articleList}>
-        <p className={styles.desc}>Newly Published</p>
-        {filteredPosts.map((post, index) => (
-          <PostItem key={index} post={post} />
-        ))}
-        <button onClick={loadMorePosts} className={styles.button}>
-          Load more
-        </button>
-      </div>
-    </>
-  )
-}
-
-export default Home
-
-export const getStaticProps = async () => {
-  const posts = getPosts(1)
+export async function getStaticProps () {
+  const posts = getPosts()
 
   return {
     props: {
@@ -48,3 +13,42 @@ export const getStaticProps = async () => {
     }
   }
 }
+
+export default function Home ({ posts }) {
+  return (
+    <>
+      <Meta
+        title="Mohab's Blog"
+        keywords='Developer, Web, HTML, CSS, JavaScript, React, ReactJS'
+        description="Mohab's Blog&#8212;Articles About Web Development Technologies."
+      />
+
+      <section className={styles.meetMe}>
+        <h1 className={styles.selfDescription}>
+          Hi! &#128075; I'm <strong>Mohab</strong>&#8212;I develop websites, play drums, fighting games, and I share my room with a cat.
+        </h1>
+        <a href='/about'>More About Me</a>
+      </section>
+
+      <main className={styles.articleList}>
+        <h2>Newly Published</h2>
+        {posts.map((post, index) => (
+          <PostItem
+            key={index}
+            post={post}
+          />
+        ))}
+      </main>
+    </>
+  )
+}
+
+/*
+<Image
+  src='/../public/avatar.webp'
+  alt="Mohab's avatar."
+  width={150}
+  height={150}
+  className={styles.avatar}
+/>
+*/
