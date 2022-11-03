@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export default function Meta ({ title, keywords, description }) {
+export default function Meta ({ title, keywords, description, stylesheet }) {
   return (
     <Head>
       <title>{title}</title>
@@ -15,6 +15,7 @@ export default function Meta ({ title, keywords, description }) {
         name='viewport'
         content='width=device-width, initial-scale=1.0'
       />
+      {stylesheet}
     </Head>
   )
 }
