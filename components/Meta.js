@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-export default function Meta ({ title, keywords, description, stylesheet }) {
+export default function Meta ({ title, keywords, description, styleLink }) {
   return (
     <Head>
       <title>{title}</title>
@@ -15,7 +15,7 @@ export default function Meta ({ title, keywords, description, stylesheet }) {
         name='viewport'
         content='width=device-width, initial-scale=1.0'
       />
-      {stylesheet}
+      <link rel='stylesheet' href={styleLink} />
     </Head>
   )
 }
