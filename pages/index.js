@@ -1,54 +1,40 @@
 import styles from '../styles/Home.module.css'
-import { getPosts } from '../scripts/utils.js'
 import Meta from '../components/Meta'
-// import Image from 'next/image'
-import PostItem from '../components/PostItem.js'
+import Header from '../components/Header'
 
-export async function getStaticProps () {
-  const posts = getPosts()
-
-  return {
-    props: {
-      posts
-    }
-  }
-}
-
-export default function Home ({ posts }) {
+export default function Home () {
   return (
     <>
       <Meta
-        title="Mohab's Blog"
+        title='MOHAB | DEVELOPER'
         keywords='Developer, Web, HTML, CSS, JavaScript, React, ReactJS'
         description="Mohab's Blog&#8212;Articles About Web Development Technologies."
       />
 
-      <section className={styles.meetMe}>
-        <h1 className={styles.selfDescription}>
-          Hi! &#128075; I'm <strong>Mohab</strong>&#8212;I develop websites, play drums, fighting games, and I share my room with a cat.
-        </h1>
-        <a href='/about'>More About Me</a>
-      </section>
+      <Header
+        homeTitle='Mohab Metwalli'
+        homeLinkWidth='150%'
+      />
 
-      <main className={styles.articleList}>
-        <h2>Newly Published</h2>
-        {posts.map((post, index) => (
-          <PostItem
-            key={index}
-            post={post}
-          />
-        ))}
+      <main className={styles.greetings}>
+        <h1 className={styles.selfDescription}>
+          Hi! &#128075; <br />
+          I'm <strong>Mohab</strong>, a writer and frontend web developer.
+        </h1>
+
+        <p>My interests include:</p>
+        <ul className={styles.interests}>
+          <li>Mobile-first, frontend web development.</li>
+          <li>Search engine optimization.</li>
+          <li>Linux-based system adminstration.</li>
+          <li>Free and open-source software.</li>
+        </ul>
+
+        <p>On my <a href='/blog'>blog</a>, I write about web-related topics, and, occasionally, other personal interests&#8212;fighting games and music.</p>
+
+        <p>I love meeting new people! If you have a question, a comment, or just want to chat, please, <a href='/hire-me#contact'>reach out</a>!</p>
       </main>
+
     </>
   )
 }
-
-/*
-<Image
-  src='/../public/avatar.webp'
-  alt="Mohab's avatar."
-  width={150}
-  height={150}
-  className={styles.avatar}
-/>
-*/

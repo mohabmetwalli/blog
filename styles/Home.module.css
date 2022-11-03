@@ -1,14 +1,38 @@
-.meetMe,
-.articleList {
-  width: 90vw;
-  margin-left: 5vw;
-  margin-right: 5vw;
+.greetings {
+  width: 80vw;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  padding-bottom: 5vh;
+  box-sizing: border-box;
 }
 
-.meetMe {
-  margin-bottom: 10vh;
-}
-
-.postItem {
+.selfDescription {
+  font-size: 200%;
   margin-bottom: 5vh;
+}
+
+.interests {
+  margin-bottom: 5vh;
+}
+
+@media only screen and (min-width: 720px) {
+  .greetings {
+    padding-bottom: 2.5vh;
+  }
+
+  .selfDescription {
+    font-size: 300%;
+    padding: 0;
+  }
+
+  .greetings p,
+  .greetings a,
+  .greetings li {
+    font-size: 120%;
+    padding: 0;
+  }
+
+  .greetings p {
+    line-height: 1.4;
+  }
 }

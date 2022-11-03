@@ -1,14 +1,16 @@
 import styles from '../styles/Header.module.css'
 
-export default function Header () {
+export default function Header ({ homeTitle, homeLinkWidth }) {
   return (
     <header className={styles.header}>
-      <h2 className={styles.homeLink}>
-        <a href='/'>Home</a>
-      </h2>
-      <h2>
-        <a href='/about'>About</a>
-      </h2>
+      <nav className={styles.nav} role='navigation' aria-label='main navigation'>
+        <div className={styles.homeDiv} role='button' aria-label='home button'>
+          <a href='/' style={{ fontSize: `${homeLinkWidth}` }} className={`${styles.link} ${styles.homeLink}`}>{homeTitle}</a>
+        </div>
+        <a href='/blog' className={`${styles.link} ${styles.blogLink}`}>Blog</a>
+        <a href='/projects' className={`${styles.link} ${styles.projectsLink}`}>Projects</a>
+        <a href='/hire-me' className={`${styles.link} ${styles.hireMeLink}`}>Hire Me</a>
+      </nav>
     </header>
   )
 }

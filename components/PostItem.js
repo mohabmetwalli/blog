@@ -7,7 +7,7 @@ export default function PostItem ({ post }) {
         <a href={`/posts/${post.slug}`}>{post.data.title}</a>
       </h3>
       <p>{post.data.excerpt}</p>
-      <a href={`/posts/${post.slug}`}>Read Full Article</a>
+      <a href={`/posts/${post.slug}`}>Read Article</a>
     </div>
   )
 }

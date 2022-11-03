@@ -1,14 +1,75 @@
 .header {
+  width: 100vw;
+  text-align: center;
+  padding-right: 5vw;
+  padding-top: 2.5vh;
+  padding-bottom: 5vh;
   box-sizing: border-box;
-  width: 90vw;
-  display: flex;
-  flex-direction: row;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-bottom: 2.5vw;
-  margin-top: 2.5vw;
 }
 
-.homeLink {
-  flex: 1;
+.nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.link {
+  border-bottom-style: none;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.homeDiv {
+  width: 100vw;
+  text-align: center;
+  padding-bottom: 5vh;
+}
+
+.blogLink,
+.projectsLink,
+.hireMeLink {
+  width: 33%;
+}
+
+@media only screen and (max-width: 320px) {
+  .link {
+    font-size: 1.1rem;
+  }
+}
+
+@media only screen and (min-width: 712px) {
+  .header {
+    width: 80vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding-top: 5vh;
+    padding-right: 0;
+  }
+
+  .homeDiv,
+  .link {
+    width: initial;
+  }
+
+  .homeDiv {
+    flex: 1;
+    text-align: left;
+    padding-bottom: 0;
+  }
+
+  .homeLink {
+    text-align: left;
+  }
+
+  .projectsLink,
+  .hireMeLink {
+    margin-left: 5vw;
+  }
+
+  .blogLink,
+  .projectsLink,
+  .hireMeLink {
+    font-size: 140%;
+  }
 }
