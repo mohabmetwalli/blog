@@ -16,6 +16,7 @@
 
 .link {
   border-bottom-style: none;
+  height: 48px;
   font-size: 1.1rem;
   text-align: center;
 }
