@@ -4,7 +4,7 @@ export default function Footer () {
   return (
     <footer className={styles.footer}>
       <section className={styles.linksOfInterest}>
-        <h3>Links of interest:</h3>
+        <h1>Links of interest:</h1>
         <ul>
           <li><a href='https://keyoxide.org/hkp/e0c581838d09fd9c941bc9baa250c0b6cc8d071f'>PGP Key</a></li>
           <li><a href='https://codeberg.org/mohab'>Gitea</a></li>

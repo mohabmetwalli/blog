@@ -10,6 +10,10 @@
   box-sizing: border-box;
 }
 
+.footer h1 {
+  font-size: 110%;
+}
+
 .footer ul {
   list-style-type: none;
   padding: 0;
@@ -18,11 +22,6 @@
 .linksOfInterest {
   text-align: left;
   margin-bottom: 5vh;
-}
-
-.linksOfInterest p,
-.linksOfInterest a {
-  font-size: 120%;
 }
 
 @media only screen and (min-width: 720px) {
