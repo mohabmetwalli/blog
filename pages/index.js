@@ -13,7 +13,7 @@ export default function Home () {
 
       <Header
         homeTitle='Mohab Metwalli'
-        homeLinkWidth='150%'
+        homeLinkFontSize='150%'
       />
 
       <main className={styles.greetings}>

@@ -46,6 +46,7 @@ a {
   color: var(--lightorange);
   transition-property: color, border-bottom-color;
   transition-duration: 1s;
+  line-height: 1.9;
   border-bottom-style: solid;
   border-bottom-color: var(--lightgreen);
 }

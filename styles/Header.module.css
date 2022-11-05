@@ -3,7 +3,7 @@
   text-align: center;
   padding-right: 5vw;
   padding-top: 2.5vh;
-  padding-bottom: 5vh;
+  padding-bottom: 2.5vh;
   box-sizing: border-box;
 }
 
@@ -17,14 +17,14 @@
 .link {
   border-bottom-style: none;
   height: 48px;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   text-align: center;
 }
 
 .homeDiv {
   width: 100vw;
   text-align: center;
-  padding-bottom: 5vh;
+  padding-bottom: 2.5vh;
 }
 
 .blogLink,
@@ -68,9 +68,7 @@
     margin-left: 5vw;
   }
 
-  .blogLink,
-  .projectsLink,
-  .hireMeLink {
+  .link {
     font-size: 140%;
   }
 }

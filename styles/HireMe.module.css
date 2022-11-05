@@ -1,0 +1,53 @@
+.hireMeSection {
+  margin-top: 0;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-bottom: 5vh;
+}
+
+.contactSection {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.hireMeSection > h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.freelancerLink {
+  font-size: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.hireMeSection p,
+.contactSection p {
+  font-size: 120%;
+}
+
+.contactSection h2 {
+  font-size: 160%;
+}
+
+@media only screen and (min-width: 712px) {
+  .hireMeSection {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
+  .freelancerLink {
+    text-align: left;
+    font-size: 189%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .freelancerLink {
+    font-size: 320%;
+  }
+
+  .hireMeDescription {
+    padding: 0;
+  }
+}

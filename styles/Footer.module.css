@@ -3,15 +3,32 @@
   margin-left: 7.5vw;
   margin-right: 10vw;
   padding-top: 5vh;
+  margin-top: 5vh;
+  text-align: center;
   border-top-style: solid;
-  border-top-color: white;
+  border-top-color: var(--gruvwhite);
   box-sizing: border-box;
+}
+
+.footer ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.linksOfInterest {
+  text-align: left;
+  margin-bottom: 5vh;
+}
+
+.linksOfInterest p,
+.linksOfInterest a {
+  font-size: 120%;
 }
 
 @media only screen and (min-width: 720px) {
   .footer {
     margin-left: 10vw;
     margin-right: 10vw;
-    padding-bottom: 2.5vh;
+    padding-bottom: 5vh;
   }
 }

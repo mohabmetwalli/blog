@@ -2,7 +2,6 @@
   width: 80vw;
   margin-left: 10vw;
   margin-right: 10vw;
-  padding-bottom: 5vh;
   box-sizing: border-box;
 }
 
@@ -15,24 +14,17 @@
   margin-bottom: 5vh;
 }
 
-@media only screen and (min-width: 720px) {
-  .greetings {
-    padding-bottom: 2.5vh;
-  }
+.greetings p,
+.greetings a,
+.greetings li {
+  font-size: 120%;
+  line-height: 1.4;
+  padding: 0;
+}
 
+@media only screen and (min-width: 720px) {
   .selfDescription {
     font-size: 300%;
     padding: 0;
-  }
-
-  .greetings p,
-  .greetings a,
-  .greetings li {
-    font-size: 120%;
-    padding: 0;
-  }
-
-  .greetings p {
-    line-height: 1.4;
   }
 }

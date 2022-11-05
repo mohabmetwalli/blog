@@ -1,0 +1,12 @@
+.projectsContainer {
+  margin-left: 10vw;
+  margin-right: 10vw;
+}
+
+.projectsContainer > h1 {
+  margin-bottom: 2.5vh;
+}
+
+.projectsContainer p {
+  font-size: 120%;
+}
